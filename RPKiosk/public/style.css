@@ -8,6 +8,15 @@ body {
   top: 0;
   width: 100%;
 }
+.nobar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.nobar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 .nav-bar {
   list-style-type: none;
