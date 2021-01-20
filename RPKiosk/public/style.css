@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2F3061;
+  color: #f5faff;
+}
+
+.nav-item {
+  float: left;
+}
+
+.nav-item-link {
+  background-color: #2F3061;
+  color: #f5faff;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color ease-in-out .3s, color ease-in-out .3s,padding ease-in-out .3s, border ease-in-out .3s;
+  border-radius: 0px 0px 6px 6px;
+}
+
+
+.nav-item-link:hover {
+  background-color: #f5faff;
+  color: #2F3061;
+  padding: 14px 24px;
+  
+}
+
+.account-button{
+  background-color: #258fdb;
+  color: #f5faff;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: padding ease-in-out .3s;
+  border-radius: 0px 0px 6px 6px;
+}
+
+.account-button:hover{
+  padding: 14px 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .notres{
+    display: none;
+  }
+}
+
+.nav-item-active {
+  background-color: #f5faff;
+  color: #2F3061;
+}
+
+.button-white{
+  background: #f5faff;
+  color: #2F3061;
+  font-weight: 600;
+  transition: color ease-in-out .3s;
+  padding:8px;
+  border-radius: 6px;
+  border: 2px solid white;
+  margin: 5px 4px;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button-white:hover{
+  color: #258fdb;
+}
+
+.button-dark{
+  background: #258fdb;
+  color: #f5faff;
+  font-weight: 600;
+  transition: background ease-in-out .3s, border ease-in-out .3s;
+  padding:8px;
+  border-radius: 6px;
+  border: 2px solid #258fdb;
+  margin: 5px 4px;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.button-dark:hover{
+  background: #2F3061;
+  border: 2px solid #2F3061;
+}
+
+.card-div{
+  background-color: white;
+  border: 1px solid #258fdb;
+  border-radius: 6px;
+  padding:10px;
+}
+
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #258fdb;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+.form-input{
+  padding: 8px;
+  background-color: white;
+  border: 2px solid rgba(37,143,219,.3);
+  border-radius: 6px;
+  font-size:15px;
+  transition: border ease-in-out .3s;
+}
+
+.form-input:hover{
+  border: 2px solid #258fdb;
+}
+
+.form-input:active{
+  border: 2px solid #2F3061;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  border-radius: 6px;
+  margin: auto;
+  padding: 20px;
+  border: 0;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #258fdb;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #258fdb transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
